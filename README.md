@@ -1,4 +1,4 @@
-# LiftForFun 
+### LiftForFun 
 Lift is powerful, lightweight, secure web framework, it claim have 7 thing are hard and impossible in other web framework, such as :
 
 1. Lazy Loading
@@ -10,42 +10,14 @@ Lift is powerful, lightweight, secure web framework, it claim have 7 thing are h
 
 #####Sure? Let's prove it.
 
-#####First build project using sbt (scratch)
 
-#####1. Sbt version, set on project/build.properties
-<pre>
-    sbt.version = 0.13.9
-</pre>
 
-#####2. Required plugin, set on project/plugins.sbt:
-<pre>
-    addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "0.7.0")
-</pre>
-troubleShot : if you're using sbt version under 13, the repository unresolved
 
-#####3. Sbt configuration on build.sbt:
-<pre>
-    organization := "org.jee.fun.lift"
+###First build project using sbt (scratch)
 
-    name := "LiftForFun"
+#####1. Architecture must be like this
+So if the file or directory is not available, you must create manually.
 
-    version := "1.0"
-
-    scalaVersion := "2.11.7"
-
-    seq(webSettings :_*)
-
-    libraryDependencies ++= {
-      val liftVersion = "2.6-RC1"
-      Seq(
-        "net.liftweb" %% "lift-webkit" % liftVersion % "compile",
-        "org.eclipse.jetty" % "jetty-webapp" % "8.1.7.v20120910"  % "container,test",
-        "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container,compile" artifacts Artifact("javax.servlet", "jar", "jar")
-      )
-}
-</pre>
-
-#####4. Architecture must be like this, so you must create file or directory manually on first create project.
 <pre>
     - project root directory
   | build.sbt
@@ -72,6 +44,50 @@ troubleShot : if you're using sbt version under 13, the repository unresolved
     - liftfromscratch/
     | =>your tests go here
 </pre>
+
+
+#####2. Sbt version, set on project/build.properties
+<pre>
+    sbt.version = 0.13.9
+</pre>
+
+#####3. Required plugin, set on project/plugins.sbt:
+<pre>
+    addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "0.7.0")
+</pre>
+troubleShot : if you're using sbt version under 13, the repository unresolved
+
+#####4. Sbt configuration on build.sbt:
+<pre>
+    organization := "org.jee.fun.lift"
+
+    name := "LiftForFun"
+
+    version := "1.0"
+
+    scalaVersion := "2.11.7"
+
+    seq(webSettings :_*)
+
+    libraryDependencies ++= {
+      val liftVersion = "2.6-RC1"
+      Seq(
+        "net.liftweb" %% "lift-webkit" % liftVersion % "compile",
+        "org.eclipse.jetty" % "jetty-webapp" % "8.1.7.v20120910"  % "container,test",
+        "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container,compile" artifacts Artifact("javax.servlet", "jar", "jar")
+      )
+}
+</pre>
+
+
+#####5. Run project
+
+<pre>
+    sbt <enter>
+    
+    container:start
+</pre>
+
 
 ###### ref: <a href="http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2">http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2</a>
 
