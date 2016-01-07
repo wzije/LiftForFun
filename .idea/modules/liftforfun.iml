@@ -52,5 +52,9 @@
     <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.2:jar" level="project" />
     <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.liftweb:lift-db_2.11:2.6-RC1:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.liftweb:lift-mapper_2.11:2.6-RC1:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.liftweb:lift-proto_2.11:2.6-RC1:jar" level="project" />
+    <orderEntry type="library" name="SBT: mysql:mysql-connector-java:5.1.38:jar" level="project" />
   </component>
 </module>

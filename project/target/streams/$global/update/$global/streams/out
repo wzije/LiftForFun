@@ -1172,7 +1172,7 @@
 [debug] == resolving dependencies for default#liftforfun-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#liftforfun-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3fe8d34
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@60768c93
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5
 [debug] 	found org.scala-lang#scala-library;2.10.5 in sbt-chain
 [debug] 	[2.10.5] org.scala-lang#scala-library;2.10.5
@@ -4424,7 +4424,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2202ms :: artifacts dl 43ms
+[debug] :: resolution report :: resolve 1903ms :: artifacts dl 40ms
 [debug] 	report for default#liftforfun-build;0.1-SNAPSHOT compile produced in /home/jee/Develop/LiftForFun/project/target/resolution-cache/reports/default-liftforfun-build-compile.xml
 [debug] 	report for default#liftforfun-build;0.1-SNAPSHOT runtime produced in /home/jee/Develop/LiftForFun/project/target/resolution-cache/reports/default-liftforfun-build-runtime.xml
 [debug] 	report for default#liftforfun-build;0.1-SNAPSHOT test produced in /home/jee/Develop/LiftForFun/project/target/resolution-cache/reports/default-liftforfun-build-test.xml
@@ -4438,5 +4438,5 @@
 [debug] 	report for default#liftforfun-build;0.1-SNAPSHOT docs produced in /home/jee/Develop/LiftForFun/project/target/resolution-cache/reports/default-liftforfun-build-docs.xml
 [debug] 	report for default#liftforfun-build;0.1-SNAPSHOT pom produced in /home/jee/Develop/LiftForFun/project/target/resolution-cache/reports/default-liftforfun-build-pom.xml
 [debug] 	report for default#liftforfun-build;0.1-SNAPSHOT scala-tool produced in /home/jee/Develop/LiftForFun/project/target/resolution-cache/reports/default-liftforfun-build-scala-tool.xml
-[debug] 	resolve done (2202ms resolve - 43ms download)
+[debug] 	resolve done (1903ms resolve - 40ms download)
 [info] Done updating.

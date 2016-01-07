@@ -1,4 +1,4 @@
-package bootstrap
+package bootstrap.liftweb
 
 import net.liftweb.http.{Req, Html5Properties, LiftRules}
 import net.liftweb.sitemap.{Menu, SiteMap}
@@ -11,11 +11,12 @@ import net.liftweb.sitemap.{Menu, SiteMap}
 class Boot {
   def boot {
     // where to search snippet
-    LiftRules.addToPackages("org.yourorganization.liftfromscratch")
+    LiftRules.addToPackages("org.jee.lift")
 
     // Build SiteMap
     def sitemap(): SiteMap = SiteMap(
       Menu.i("Home") / "index"
+
     )
 
     // Use HTML5 for rendering

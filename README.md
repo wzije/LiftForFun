@@ -8,15 +8,16 @@ Lift is powerful, lightweight, secure web framework, it claim have 7 thing are h
 5. Designer friendly templates
 6. Wizard -- multi page input screens with full back-button support Security
 
-#####Sure? Let's prove it.
+######Sure? Let's prove it.
 
 
 
 
 ###First build project using sbt (scratch)
+It's the simple build lift web
 
 #####1. Architecture must be like this
-So if the file or directory is not available, you must create manually.
+if the file or directory is not available, you must create manually.
 
 <pre>
     - project root directory
@@ -55,7 +56,7 @@ So if the file or directory is not available, you must create manually.
 <pre>
     addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "0.7.0")
 </pre>
-troubleShot : if you're using sbt version under 13, the repository unresolved
+noted : just for sbt > 0.13.0
 
 #####4. Sbt configuration on build.sbt:
 <pre>
@@ -83,8 +84,7 @@ troubleShot : if you're using sbt version under 13, the repository unresolved
 #####5. Run project
 
 <pre>
-    sbt <enter>
-    
+    sbt [enter]    
     container:start
 </pre>
 
