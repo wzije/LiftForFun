@@ -8,22 +8,22 @@ Lift is powerful, lightweight, secure web framework, it claim have 7 thing are h
 5. Designer friendly templates
 6. Wizard -- multi page input screens with full back-button support Security
 
-###Sure? Let's prove it.
+#####Sure? Let's prove it.
 
-###First build project using sbt (scratch)
+#####First build project using sbt (scratch)
 
-###1. Sbt version, set on project/build.properties
+#####1. Sbt version, set on project/build.properties
 <pre>
     sbt.version = 0.13.9
 </pre>
 
-###2. Required plugin, set on project/plugins.sbt:
+#####2. Required plugin, set on project/plugins.sbt:
 <pre>
     addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "0.7.0")
 </pre>
 troubleShot : if you're using sbt version under 13, the repository unresolved
 
-###3. Sbt configuration on build.sbt:
+#####3. Sbt configuration on build.sbt:
 <pre>
     organization := "org.jee.fun.lift"
 
@@ -45,7 +45,7 @@ troubleShot : if you're using sbt version under 13, the repository unresolved
 }
 </pre>
 
-###4. Architecture must be like this, so you must create file or directory manually on first create project.
+#####4. Architecture must be like this, so you must create file or directory manually on first create project.
 <pre>
     - project root directory
   | build.sbt
@@ -73,5 +73,5 @@ troubleShot : if you're using sbt version under 13, the repository unresolved
     | =>your tests go here
 </pre>
 
-####reference : <a href="http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2">http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2</a>
+###### ref: <a href="http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2">http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2</a>
 
