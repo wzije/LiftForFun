@@ -1,5 +1,5 @@
 
-organization := "org.jee.fun.lift"
+organization := "org.jee.lift"
 
 name := "LiftForFun"
 

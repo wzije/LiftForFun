@@ -4,7 +4,7 @@
 		module="liftforfun-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160107135411"
+		publication="20160107144259"
 		e:scalaVersion="2.10" e:sbtVersion="0.13"
 	>
 		<description>
