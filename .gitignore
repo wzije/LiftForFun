@@ -7,7 +7,7 @@
 .history
 .lib/
 dist/*
-target/
 lib_managed/
 src_managed/
-/.idea
+target
+.idea

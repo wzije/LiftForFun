@@ -1,2 +1,3 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	[0m
+[0m[[0mdebug[0m] [0m	(/home/jee/Develop/LiftForFun/src/main/resources/properties,/home/jee/Develop/LiftForFun/target/scala-2.11/classes/properties)[0m
+[0m[[0mdebug[0m] [0m	(/home/jee/Develop/LiftForFun/src/main/resources/properties/default.props,/home/jee/Develop/LiftForFun/target/scala-2.11/classes/properties/default.props)[0m

@@ -86,8 +86,13 @@ noted : just for sbt > 0.13.0
 <pre>
     sbt [enter]    
     container:start
+    
+    [OR for auto reload]
+    ~; container:restart; container:reload / 
+
 </pre>
 
 
-###### ref: <a href="http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2">http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2</a>
-
+ref: 
+- http://chimera.labs.oreilly.com/books/1234000000030/ch01.html#_solution_2
+- http://tech.damianhelme.com/diy-lift-crud-an-alternative-to-crudify/

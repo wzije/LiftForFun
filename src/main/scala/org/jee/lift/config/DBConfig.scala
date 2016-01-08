@@ -1,8 +1,8 @@
 package org.jee.lift.config
 
-import java.sql.{DriverManager, Connection}
+import java.sql.{Connection, DriverManager}
 
-import net.liftweb.common.{Empty, Full, Box}
+import net.liftweb.common.{Box, Empty, Full}
 import net.liftweb.db.{ConnectionIdentifier, ConnectionManager}
 import net.liftweb.util.Props
 
@@ -10,32 +10,36 @@ import net.liftweb.util.Props
  * @author Jehan Afwazi Ahmad.
  */
 
-class DBVendorBasic extends ConnectionManager{
-  override def newConnection(name: ConnectionIdentifier): Box[Connection] = ???
+object DBConfigBasic extends ConnectionManager {
+  /**
+   * http://exploring.liftweb.net/master/index-8.html
+   */
 
-  override def releaseConnection(conn: Connection): Unit = ???
+  Class.forName(Props.get("db.driver") openOr "com.mysql.jdbc.Driver")
 
-  /**http://prayagupd-dreamspace.blogspot.co.id/2012/10/connecting-liftweb-to-mysql.html**/
+  // define methods
+  def newConnection(name: ConnectionIdentifier) = {
+    try {
+      Full(DriverManager.getConnection(
+        Props.get("db.url") openOr "jdbc:mysql://localhost/liftforfun_db",
+        Props.get("db.user") openOr "root",
+        Props.get("db.password") openOr "localhost"
+      ))
+    } catch {
+      case e: Exception => e.printStackTrace(); Empty
+    }
+  }
 
- /* if (!DB.jndiJdbcConnAvailable_?) {
-    println("jndiJdbcConnAvailable_ : " + jndiJdbcConnAvailable_);
-    val vendor =
-      new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver",
-        Props.get("db.url") openOr "jdbc:h2:lift_proto.db;AUTO_SERVER=TRUE",
-        Props.get("db.user"),
-        Props.get("db.password"))
+  def releaseConnection(conn: Connection) {
+    conn.close()
+  }
 
-    LiftRules.unloadHooks.append(vendor.closeAllConnections_! _)
-
-    DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
-  }//end of jndiJdbcConnAvailable_*/
 }
 
-class DBVendorComplex extends ConnectionManager {
+object DBConfigComplex extends ConnectionManager {
   /**
-  * cara ruwet start
-  * https://www.assembla.com/wiki/show/liftweb/Mapper#a_mapper_example
-  **/
+   * https://www.assembla.com/wiki/show/liftweb/Mapper#a_mapper_example
+   **/
 
   private var pool: List[Connection] = Nil
   private var poolSize = 0
