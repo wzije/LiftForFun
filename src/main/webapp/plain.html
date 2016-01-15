@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:lift="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lift For Fun</title>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/2.1.1/jquery.js"></script>
+</head>
+<body>
+<h1>Welcome Plain</h1>
+
+<form data-lift="PlainSnippet" action="/plain" method="post">
+    <input type="text" name="name" placeholder="What's your name?">
+    <input type="submit" value="Go">
+</form>
+<button class="lift:PlainSnippet.renderButton">Ask the server</button>
+<div style="display: none" id="ponyDiv">
+    <h2>SHOW IT</h2>
+</div>
+<lift:msgs />
+</body>
+</html>

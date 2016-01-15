@@ -15,7 +15,8 @@ import org.jee.lift.config.DBConfigBasic
 class Boot {
   def boot {
     // where to search snippet
-    LiftRules.addToPackages("org.jee.lift")
+    LiftRules.addToPackages("org.jee")
+
 
     /*connect database*/
     DB.defineConnectionManager(DefaultConnectionIdentifier, DBConfigBasic)
@@ -23,6 +24,8 @@ class Boot {
     // Build SiteMap
     def sitemap(): SiteMap = SiteMap(
       Menu.i("Home") / "index",
+      Menu.i("Plain") / "plain",
+      Menu.i("Scalajs") / "scalajs",
       Menu.i("List Posts") / "posts" / "posts/list",
       Menu.i("Create Posts") / "posts" / "posts/create",
       Menu.i("Edit Posts") / "posts" / "posts/edit" >> Hidden,

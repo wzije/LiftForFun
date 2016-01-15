@@ -17,6 +17,7 @@ object DBConfigBasic extends ConnectionManager {
 
   Class.forName(Props.get("db.driver") openOr "com.mysql.jdbc.Driver")
 
+
   // define methods
   def newConnection(name: ConnectionIdentifier) = {
     try {

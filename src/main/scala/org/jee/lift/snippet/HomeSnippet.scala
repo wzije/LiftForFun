@@ -6,6 +6,5 @@ import net.liftweb.util.Helpers._
  */
 class HomeSnippet {
 
-  def renderText = "p *" #> "Using snippet yes"
-
+  def renderText = "p *" #> "Using snippet noooo"
 }

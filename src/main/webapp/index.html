@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:lift="http://www.w3.org/1999/xhtml">
 <head>
     <title>Lift For Fun</title>
 </head>
 <body>
 <h1>Welcome Lift</h1>
+
 <p class="lift:HomeSnippet.renderText"></p>
 
+<div id="main" class="lift:surround?with=default&at=content">
+    <div>
+        Using Lift's SHtml.onSubmit, we've got better control
+        over the form processing.
+    </div>
+    <div>
+        <form class="lift:PostSnippet?form=post">
+            Name: <input name="name"><br>
+            Age: <input name="age" value="0"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+
+<!--<lift:msgs />-->
 </body>
 </html>

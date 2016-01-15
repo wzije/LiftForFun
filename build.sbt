@@ -1,23 +1,28 @@
+import com.lihaoyi.workbench.Plugin._
 
-organization := "org.jee.lift"
+enablePlugins(ScalaJSPlugin)
 
-name := "LiftForFun"
+workbenchSettings
 
-version := "1.0"
+libraryDependencies ++= Seq(
+  "org.scala-js" %%% "scalajs-dom" % "0.8.0",
+  "com.lihaoyi" %%% "scalatags" % "0.5.2"
+)
 
-scalaVersion := "2.11.7"
+bootSnippet := "example.ScalaJSExample().main(document.getElementById('canvas'));"
 
-seq(webSettings: _*)
+updateBrowsers <<= updateBrowsers.triggeredBy(fastOptJS in Compile)
 
-libraryDependencies ++= {
-  val liftVersion = "2.6-RC1"
-  Seq(
-    "net.liftweb" %% "lift-webkit" % liftVersion,
-    "net.liftweb" % "lift-mapper_2.11" % liftVersion,
-    "mysql" % "mysql-connector-java" % "5.1.38",
+val scalajsOutputDir = Def.settingKey[File]("directory for javascript files output by scalajs")
+
+scalajsOutputDir := (baseDirectory in Compile).value / "src/main/webapp/assets/js"
+
+crossTarget in fastOptJS := scalajsOutputDir.value
+
+crossTarget in fullOptJS := scalajsOutputDir.value
+
+javaOptions in Jetty ++= Seq(
+  "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+)
 
 
-    "org.eclipse.jetty" % "jetty-webapp" % "8.1.7.v20120910" % "container,test",
-    "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container,compile" artifacts Artifact("javax.servlet", "jar", "jar")
-  )
-}

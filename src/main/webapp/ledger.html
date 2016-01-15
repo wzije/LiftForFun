@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:lift="http://www.w3.org/1999/xhtml" xmlns:entry="http://java.sun.com/xml/ns/javaee">
+<head>
+    <title>Lift For Fun</title>
+</head>
+<body>
+<h1>Welcome Ledger</h1>
+
+<lift:LedgerSnippet.add form="POST">
+    <entry:description/>
+    <entry:amount/>
+    <br/>
+    <entry:submit/>
+</lift:LedgerSnippet.add>
+
+<lift:msgs/>
+</body>
+</html>
